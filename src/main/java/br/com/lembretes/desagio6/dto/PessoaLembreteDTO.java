@@ -1,0 +1,15 @@
+package br.com.lembretes.desagio6.dto;
+
+import br.com.lembretes.desagio6.entity.Lembrete;
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+public class PessoaLembreteDTO {
+    private Long id;
+    private String nome;
+    private String cpf;
+    private int idade;
+    private List<Lembrete> lembretes;
+}
