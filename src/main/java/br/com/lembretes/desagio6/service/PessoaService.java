@@ -23,6 +23,9 @@ public class PessoaService {
     public Optional<Pessoa> buscarPessoaPorId(Long id) {
         return pessoaRepository.findById(id);
     }
+    public Optional<Pessoa> buscarPessoaPornome(String nome) {
+        return pessoaRepository.findByNome(nome);
+    }
 
     public Pessoa salvarPessoa(Pessoa pessoa) {
         return pessoaRepository.save(pessoa);

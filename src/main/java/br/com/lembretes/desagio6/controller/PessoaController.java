@@ -41,9 +41,9 @@ public class PessoaController {
         return ResponseEntity.ok(pessoasLembretes);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<PessoaLembreteDTO> buscarPessoaPorId(@PathVariable Long id) {
-        return pessoaService.buscarPessoaPorId(id)
+    @GetMapping("/{nome}")
+    public ResponseEntity<PessoaLembreteDTO> buscarPessoaPorNome(@PathVariable String nome) {
+        return pessoaService.buscarPessoaPornome(nome)
                 .map(pessoa -> {
                     PessoaLembreteDTO pessoaComLembretes = new PessoaLembreteDTO();
                     pessoaComLembretes.setId(pessoa.getId());
