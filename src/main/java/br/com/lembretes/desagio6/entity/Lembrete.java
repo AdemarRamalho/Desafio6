@@ -12,11 +12,14 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "tb_lembrete", schema = "public")
 public class Lembrete {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id",nullable = false)
     private Long id;
 
+    @Column(name = "descrição", nullable = false)
     @NotBlank(message = "O texto do lembrete é obrigatorio")
     private String descricao;
 

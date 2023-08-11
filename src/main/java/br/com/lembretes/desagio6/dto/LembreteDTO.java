@@ -9,7 +9,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+
 public class LembreteDTO {
 
     @NotBlank(message = "O texto do lembrete é obrigatorio")
