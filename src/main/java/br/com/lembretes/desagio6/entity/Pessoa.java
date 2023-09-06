@@ -34,4 +34,11 @@ public class Pessoa {
     @JsonIgnore
     private List<Lembrete> lembrete = new ArrayList<>();
 
+    public Pessoa(Long id,String nome,String cpf, int idade) {
+        this.id = id;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.idade = idade;
+    }
+
 }
